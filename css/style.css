@@ -1,0 +1,343 @@
+            /* ----------------------------------First content-------------------------------------------*/
+
+            /* هنا تحديد الصورة كخلفية */
+            #First_content {
+              width: 100%;
+              height: 100vh;
+              background-image: url('../images/FirstPic.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              position: relative;
+              color: white;
+              margin-bottom: 8%;
+            }
+
+            .overlay-text {
+              padding: 40px;
+              border-radius: 20px;
+            }
+
+            .overlay-text h1 {
+              font-size: 45px;
+              margin-bottom: 20px;
+            }
+
+            .join-btn {
+              background-color: #0DA9A6;
+              color: white;
+              padding: 12px 24px;
+              border: none;
+              border-radius: 8px;
+              font-size: 25px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            .join-btn:hover {
+              background-color: #0b8885;
+              /* لون أغمق عند التمرير */
+              transform: scale(1.05);
+            }
+
+            /* ----------------------------------Second content-------------------------------------------*/
+            #second_content {
+              margin-top: 20px;
+              width: 100%;
+              height: 70vh;
+              background-image: url('../images/pic2background.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              position: relative;
+              color: white;
+              margin-bottom: 5%;
+            }
+
+            .content-wrapper {
+              display: flex;
+              justify-content: space-between;
+              gap: 40px;
+            }
+
+            #second_image {
+              width: 30%;
+              /* تقليل عرض الصورة */
+              height: 50%;
+            }
+
+            #second_content_text {
+              font-size: 25px;
+              text-align: right;
+              /* محاذاة النص لليمين */
+              margin-right: 50px;
+              /* إزالة أي مسافة إضافية من الجهة اليمنى */
+              padding-right: 10px;
+              /* يمكنك تقليل المسافة بمقدار أقل أو أكبر حسب الحاجة */
+            }
+
+
+
+
+            .modal-overlay {
+              position: fixed;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              /* تغميق الخلفية */
+              display: none;
+              z-index: 99;
+            }
+
+     /* النافذة المنبثقة الكاملة */
+.login-modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية مظللة شفافة */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+            .close-btn {
+              position: absolute;
+              top: 10px;
+              left: 15px;
+              font-size: 24px;
+              cursor: pointer;
+              color: #444;
+            }
+
+
+            .modal {
+              display: flex;
+              /* مهم جدًا */
+              justify-content: center;
+              align-items: center;
+              position: fixed;
+              inset: 0;
+              background-color: rgba(0, 0, 0, 0.6);
+              z-index: 1000;
+            }
+
+
+            /* محتوى النافذة */
+            .modal-content {
+              background-color: white;
+              margin: auto;
+              margin-top: 7%;
+              padding: 20px;
+              border-radius: 10px;
+
+              z-index: 1000;
+              width: 90%;
+              max-width: 400px;
+              position: relative;
+              animation: fadeIn 0.3s ease-in-out;
+              text-align: right;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+              max-height: 90vh;
+              overflow-y: auto;
+            }
+            
+
+            /* حركة ظهور ناعمة */
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: scale(0.95);
+              }
+
+              to {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+
+            /* زر الإغلاق */
+            .close {
+              position: absolute;
+              top: 10px;
+              left: 15px;
+              font-size: 24px;
+              cursor: pointer;
+              color: #444;
+              transition: color 0.3s ease;
+            }
+            .close:hover {
+              color: #000;
+            }
+
+            /* الشعار */
+            .modal-content .logo {
+              width: 80px;
+              display: block;
+              margin: 0 auto 15px;
+            }
+
+            /* عنوان النافذة */
+            .modal-content .title {
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 20px;
+              color: #000;
+            }
+/* تنسيق المدخلات */
+
+.modal-content .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+            .modal-content .form-group label {
+              display: block;
+              margin-bottom: 5px;
+              color: #333;
+            }
+
+            .modal-content .form-group input {
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              box-sizing: border-box;
+            }
+
+            /* زر تسجيل الدخول */
+            .modal-content .login2-btn {
+              width: 100%;
+              background-color: #1ca89e;
+              color: white;
+              border: none;
+              padding: 12px;
+              border-radius: 8px;
+              font-weight: bold;
+              cursor: pointer;
+              margin-top: 10px;
+              transition: background-color 0.3s ease;
+            }
+            .modal-content .login2-btn:hover {
+              background-color: #159489;
+            }
+
+            /* الروابط */
+            .modal-content .forgot-password,
+            .modal-content .create-account {
+              display: inline-block;
+              margin-top: 10px;
+              color: #1ca89e;
+              text-decoration: none;
+              font-size: 14px;
+            }
+
+            .modal-content .forgot-password:hover,
+            .modal-content .create-account:hover {
+              text-decoration: underline;
+            }
+
+            .modal-content .account-actions {
+              margin-top: 15px;
+              font-size: 14px;
+              color: #555;
+            }
+
+            /* ---------------------------latest-programs and partners--------------------------------------*/
+
+            .latest-programs,
+            .partners {
+              text-align: center;
+              padding: 40px 20px;
+            }
+
+            .section-title {
+              font-size: 28px;
+              font-weight: bold;
+              margin-bottom: 20px;
+              color: #333;
+            }
+
+            .view-all {
+              display: block;
+              margin-bottom: 30px;
+              color: #00c8a0;
+              text-decoration: none;
+              font-weight: bold;
+              font-size: 16px;
+            }
+
+            .cards-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+            }
+
+            .program-card {
+              background-color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+              overflow: hidden;
+              max-width: 280px;
+              text-align: right;
+            }
+
+            .program-card img {
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+            }
+
+            .card-content {
+              padding: 15px;
+            }
+
+            .status {
+              color: #1BCC4A;
+              font-weight: bold;
+              margin-bottom: 8px;
+            }
+
+            .program-title {
+              font-size: 18px;
+              margin: 10px 0;
+              font-weight: bold;
+              color: #222;
+            }
+
+            .program-info {
+              color: #666;
+              font-size: 14px;
+            }
+
+            .partners-logos {
+              display: flex;
+              justify-content: center;
+              gap: 30px;
+              margin-top: 20px;
+              flex-wrap: wrap;
+            }
+
+            .partners-logos img {
+              background: #f9f9f9;
+              padding: 10px 20px;
+              border-radius: 12px;
+              height: 80px;
+            }

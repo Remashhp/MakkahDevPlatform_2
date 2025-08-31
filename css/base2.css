@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'Sakkal Majalla';
+  src: url('fonts/ArbFONTS-majalla.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Sakkal Majalla', sans-serif;
+  background-color: #FAFAFA;
+}  
+     /* ----------------------------------header + nav bar-------------------------------------------*/ 
+     .header {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: -1px;
+
+    }
+    
+      
+      .right-side {
+      display: flex;
+       margin-left: 280px;
+       gap: 10px; /* يقلل المسافة أكثر بينهم */
+      }
+      
+      .logo-img img {
+      height: 100px; /* أو بين 50px - 65px */
+      width: auto;  /* حتى يحافظ على الأبعاد الأصلية بدون تشويه */
+      
+      }
+      
+        .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        gap: 30px;
+        align-items: center;
+        padding-left: 15px;
+        background-color: rgba(13, 169, 166, 0.08);
+        }
+        
+        
+        .navbar a {
+          text-decoration: none;
+          color: #333;
+           font-weight: bold;
+          transition: all 0.3s ease;
+        }
+        
+        .navbar a:hover {
+          color: #0DA9A6;          /* يتغير اللون */
+          transform: scale(1.1);
+            /* يكبر شوي */
+          }
+          
+          
+          .login-btn {
+            height: 40px;
+            width:80px;
+            background-color: #0DA9A6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .login-btn:hover {
+            background-color: #0b8885;
+            /* لون أغمق عند التمرير */
+            transform: scale(1.05);
+          }
+                 /* ----------------------------------footer-------------------------------------------*/   
+        
+        footer {
+          text-align: center;
+          margin: 0px;
+          padding: 20px;
+          color: white;
+          background: linear-gradient(to right,  #3D7EB9, #43989A, #4BAF79); /* أخضر فاتح إلى أزرق */
+
+        }
+        
+        
+        .footer-logo {
+          width: 100px;
+          /* تحكمي في حجم الصورة */
+          margin-bottom: 10px;
+        }
+        
+        .footer-menu {
+          list-style: none;
+          /* يشيل النقط */
+          padding: 0;
+          margin: 10px 0;
+          display: flex;
+          justify-content: center;
+          gap: 77px;
+          /* المسافة بين العناصر */
+        }
+        
+        .footer-menu li a {
+          text-decoration: none;
+          color: #ffffff;
+          /* لون الروابط */
+          font-weight: bold;
+        }
+        
+        .footer-text {
+          margin-top: 15px;
+          font-size: 14px;
+          color: #ffffff;
+        }
+        
+/*---------------------------------------User drop down list--------------------------------*/
+.user-dropdown {
+    position: relative; /* هذا يخلي الدروب داون يتمركز حسب الزر */
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info {
+    transform: translateX(60%);
+    position: absolute;
+    top: 110%; /* يخليه ينزل تحت الزر بشوي */
+    right: 0;  /* يخليه يطلع بمحاذاة الزر */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    z-index: 1000;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .user-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #0DA9A6;
+  }
+  
+  .user-info label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .user-info input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .save-btn {
+    background-color: #0DA9A6;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .user-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .save-btn {
+    padding: 10px 20px;
+    background-color: #0DA9A6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-btn:hover {
+    background-color: #0b8885;
+  }
+  
+  .logout-text {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: text-decoration 0.3s;
+  }
+  
+  .logout-text:hover {
+    text-decoration: underline;
+  }

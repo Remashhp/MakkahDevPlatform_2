@@ -1,0 +1,126 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.short_line{
+
+  width:250px ;
+  height: 5px;
+  background-color: #0DA9A6;
+
+}
+
+.long_line{
+
+  width:350px ;
+  height: 4px;
+  background-color: #0D8AA9;
+  margin-bottom: 20px ;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #0DA9A6;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filters input[type="text"],
+.filters input[type="date"],
+.filters select {
+  padding: 10px 16px;
+  padding-right: 35px; /* مساحة للأيقونة */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  position: relative;
+}
+
+.programs {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.view-all {
+  display: block;
+  margin-bottom: 30px;
+  color: #00c8a0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end; /* المحاذاة من اليمين */
+}
+
+.program-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: calc(25% - 20px); /* عرض البطاقة ليظهر 4 في كل صف */
+  text-align: right;
+}
+
+.program-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.status {
+  color: #1BCC4A;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.program-title {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #222;
+}
+
+.program-info {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .program-card {
+    width: calc(50% - 20px); /* 2 في كل صف للأجهزة الصغيرة */
+  }
+}
+
+@media (max-width: 480px) {
+  .program-card {
+    width: 100%; /* بطاقة واحدة في الصف للأجهزة الصغيرة جدًا */
+  }
+}

@@ -1,0 +1,104 @@
+
+        body {
+            font-family:  "Sakkal Majalla", Helvetica;
+            margin: 0;
+            padding: 0;
+            display: block;
+            flex-direction: column;
+            justify-content: normal;
+            align-items: normal;
+            min-height: 100vh;
+            background-color: #fafafa;
+            position: relative;
+
+        }
+        main {
+          min-height: calc(100vh - 300px); /* يتكيف مع ارتفاع الهيدر والفوتر */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .outer-frame {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            margin: 20px auto;
+            text-align: center;
+            border: 1px solid #848787;
+        }
+        .inner-frame {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 15px;
+            max-width: 120px;
+        }
+        .title {
+            color: #0ba09d;
+            font-size: 30px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            box-sizing: border-box;
+            margin-top: 8px;
+            border: 1px solid #848787;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #6b6a6a;
+
+        }
+        .login2-btn {
+            background-color: #0da9a6;
+            color: white;
+            padding: 12px 0;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 15px 0;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .login2-btn:hover {
+            background-color: #098e8c;
+        }
+        .forgot-password {
+            display: block;
+            color: #098e8c;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .account-actions {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #757777;
+        }
+        .create-account {
+            color: #098e8c;
+            text-decoration: none;
+            margin-right: 5px;
+            font-weight: 700;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #6b6a6a;
+            margin-bottom: 5px;
+        }
+    

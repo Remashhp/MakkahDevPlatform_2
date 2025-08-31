@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم الموارد البشرية</title>
+  <link rel="stylesheet" href="CSSAdmin/BaseHedar.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img class="logo" src="imageAdmin/logoHome.png" alt="شعار الوزارة" />
+      <div class="user-info">
+        <div class="icon-circle">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="username">شهد القرشي</div>
+      </div>
+      <div class="username-line"></div>
+
+      <a class="active" href="HomeAdmin.php">
+        <img src="imageAdmin/home.svg" alt="أيقونة" />
+        <b> الرئيسية </b>
+      </a>
+      <a href="HomeAddCourse.php">
+        <img src=" imageAdmin/AddCourse.svg" alt="أيقونة" />
+        <b> اضافة دورة </b>
+      </a>
+      <a href="RegistrationRequests.php">
+        <img src="imageAdmin/request log.svg" alt="أيقونة" />
+        <b> سجل الطلبات </b>
+      </a>
+      <a href="Attachments.php">
+        <img src="imageAdmin/files.svg" alt="أيقونة" />
+        <b> المرفقات </b>
+      </a>
+      <a href="AssignTrainer.php">
+        <img src="imageAdmin/coach.svg" alt="أيقونة" />
+        <b> تعيين مدرب </b>
+      </a>
+      <a href="Users.php">
+        <img src="imageAdmin/AllUser.svg" alt="أيقونة" />
+        <b> المستخدمين </b>
+      </a>
+      <a href="SurveyForm.php">
+        <img src="imageAdmin/surveys.svg" alt="أيقونة" />
+        <b> نموذج الاستبيان </b>
+      </a>
+
+      <button id="logout-link" type="button"
+        style="background: none; border: none; cursor: pointer; display: flex; align-items: center; width: 100%; padding: 10px 10px 10px 20px; margin: 10px 0; color: inherit; font: inherit; gap:10px;">
+        <img src="imageAdmin/log-out.svg" alt="أيقونة" />
+        <b> تسجيل خروج </b>
+      </button>
+
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <div class="welcome-container">
+          <div class="icon-circle">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="welcome">أهلاً شهد</div>
+          <div class="header-divider"></div>
+          <i class="far fa-envelope" style="font-size: 24px; color: #000;"></i>
+        </div>
+      </div>
+
+      <div class="divider-section">
+        <div class="divider-title" style="color: rgba(8, 105, 130, 1); font-size:35px ;"> </div>
+        <div class="short_line"></div>
+        <div class="long_line"></div>
+      </div>
+
+
+
+
+
+
+
+
+      <!-- نافذة تسجيل الخروج -->
+      <div id="logoutModal" class="logout-modal-bg" tabindex="-1">
+        <div class="logout-modal" role="dialog" aria-modal="true" aria-labelledby="logoutModalLabel">
+          <div class="logout-modal-header">
+            تسجيل الخروج
+            <button class="logout-modal-close" onclick="closeLogoutModal()" title="إغلاق"
+              aria-label="إغلاق">&times;</button>
+          </div>
+          <div class="logout-modal-content">
+            هل انت متأكد من رغبتك بتسجيل الخروج ؟
+          </div>
+          <div class="logout-modal-actions">
+            <button class="btn-cancel" onclick="closeLogoutModal()">إلغاء</button>
+            <button class="btn-logout" onclick="logoutRedirect()">
+              <i class="fas fa-sign-out-alt"></i>
+              تسجيل الخروج
+            </button>
+          </div>
+        </div>
+      </div>
+      <script src="test.js"></script>
+      <!-- نهاية نافذة تسجيل الخروج -->
+
+
+
+  </div>
+  </main>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const links = document.querySelectorAll('.sidebar a');
+    const currentPath = window.location.pathname.toLowerCase();
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const normalizedHref = new URL(href, window.location.origin).pathname.toLowerCase();
+
+      if (currentPath.endsWith(normalizedHref)) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
